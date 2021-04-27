@@ -1,7 +1,6 @@
 const addToList = () => {
   let userData = document.querySelector("#userData").value;
   
-  
   if (userData != "") {
     let newLi = document.createElement("li");
     let text = document.createTextNode(userData);
@@ -12,6 +11,8 @@ const addToList = () => {
     const newContainer = document.createElement("span");
     const doneButton = document.createElement("button");
     const deleteButton = document.createElement("button");
+
+
     
     doneButton.innerHTML = "✓";
     deleteButton.innerHTML = "x";
@@ -22,12 +23,17 @@ const addToList = () => {
     doneButton.classList.add("done");
     newLi.appendChild(newContainer);
 
+
     const check = () => newLi.classList.toggle("completed");
     // const del = () => newLi.remove() ;
     // Adding event listener to my buttons
     deleteButton.addEventListener("click", () => newLi.remove());
     doneButton.addEventListener("click", check);
+
+    
   } else {
     document.querySelector("#userData").placeholder = "Please Enter text first";
   }
 };
+
+
