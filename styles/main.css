@@ -27,9 +27,11 @@ body {
 .result {
   width: 300px;
   color: black;
-  font-size: 15px;
+  background-color: none;
+  list-style-type: none;
+  font-size: 20px;
   line-height: 20px;
-  position: relative;
+  margin: 0.5rem;
 }
 
 .text-field textarea {
@@ -78,10 +80,15 @@ button {
   background-color: none;
   color: #fe1667;
   border: none;
-  margin: 0 15px;
-  position: absolute;
-  left: 170px;
   font-family: Arial, Helvetica, sans-serif;
+}
+button:focus {
+  outline: none;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
 }
 
 /*# sourceMappingURL=main.css.map */
